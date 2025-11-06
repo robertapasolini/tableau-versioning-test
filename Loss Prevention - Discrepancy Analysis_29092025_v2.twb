@@ -1299,9 +1299,6 @@
       <column caption='% Shrinkages on Sales amt country' datatype='real' default-format='p0.000%' hidden='true' name='[% Shrinkages on Sales amt geo (copy)_1010776693301698675]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([FIXED Sales Euro Geo (copy)_1010776693300256879])' />
       </column>
-      <column caption='% Shrinkages on Sales amt_D2' datatype='real' default-format='p0.00%' name='[% Shrinkages on Sales amt geo (copy)_2531023049184694278]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[Calculation_1010776694259306634]/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-      </column>
       <column caption='% Shrinkages on Sales amt region' datatype='real' default-format='p0.000%' hidden='true' name='[% Shrinkages on Sales amt geo country (copy)_1010776693301833844]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([FIXED Sales Euro Geo country (map tooltip) (copy)_1010776693300678768])' />
       </column>
@@ -1310,9 +1307,6 @@
       </column>
       <column caption='% Shrinkages on Sales qty region' datatype='real' default-format='p0.000%' hidden='true' name='[% Shrinkages on Sales qty country (copy)_1010776693304098935]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([FIXED Sales Qty Geo country (copy)_1010776693300924529])' />
-      </column>
-      <column caption='% Shrinkages on Sales qty_D2' datatype='real' default-format='p0.00%' name='[% Shrinkages on Sales qty geo (copy)_2531023049185144839]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([sales_qty])' />
       </column>
       <column caption='% Shrinkages on Sales qty country' datatype='real' default-format='p0.000%' hidden='true' name='[% Shrinkages on Sales qty prod (copy)_1010776693303771254]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([FIXED Sales Qty Geo (copy)_1010776693300256878])' />
@@ -1323,17 +1317,8 @@
       <column caption='% Shrinkages on Sales amt prod (treemap)' datatype='real' default-format='p0.000%' name='[% Shrinkages on Sales qty prod (treemap) (copy)_1368249917539590164]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Calculation_1010776694259306634]/SUM({ FIXED [Calculation_1010776693205999689]:SUM([Sales Euro Amt (copy)_1104226336341213190])})' />
       </column>
-      <column caption='% physical on sales eur_D2' datatype='real' default-format='p0.000%' name='[% physical on sales eur (copy)_2531023049182289920]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([physical_shortage_eur_amt (copy)_1104226336336867332])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-      </column>
       <column caption='% physical on sales eur' datatype='real' default-format='p0.000%' name='[% physical on sales qty (copy)_1878001098305200158]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([physical_shortage_eur_amt (copy)_1104226336336867332])/sum({ FIXED (IF [Parameters].[Parameter 2]=&apos;1&apos; THEN [Calculation_1778640428713099278] ELSE [sku_code] END):SUM([Sales Euro Amt (copy)_1104226336341213190])})' />
-      </column>
-      <column caption='% physical on sales qty_D2' datatype='real' default-format='p0.000%' name='[% physical on sales qty (copy)_2531023049183019009]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([physical_shortage_qty])/SUM([sales_qty])' />
-      </column>
-      <column caption='% post inv. on sales eur_D2' datatype='real' default-format='p0.000%' name='[% post inv. on sales eur (copy)_2531023049183768580]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([post_inventory_adj_eur_amt (copy)_1104226336337707013])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
       </column>
       <column caption='% theft on sales qty' datatype='real' default-format='p0.000%' name='[% post inv. on sales qty (copy)_1878001098302918681]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([thefts_qty])/sum({ FIXED (IF [Parameters].[Parameter 2]=&apos;1&apos; THEN [Calculation_1778640428713099278] ELSE [sku_code] END):SUM([sales_qty])})' />
@@ -1341,23 +1326,14 @@
       <column caption='% post inv. on sales eur' datatype='real' default-format='p0.000%' name='[% post inv. on sales qty (copy)_1878001098305511455]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([post_inventory_adj_eur_amt (copy)_1104226336337707013])/sum({ FIXED (IF [Parameters].[Parameter 2]=&apos;1&apos; THEN [Calculation_1778640428713099278] ELSE [sku_code] END):SUM([Sales Euro Amt (copy)_1104226336341213190])})' />
       </column>
-      <column caption='% post inv. on sales qty_D2' datatype='real' default-format='p0.000%' name='[% post inv. on sales qty (copy)_2531023049184239621]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([post_inventory_adj_qty])/SUM([sales_qty])' />
-      </column>
       <column caption='% shrink eur location map' datatype='real' default-format='p0.00%' name='[% shrink qty location map (copy)_342836577804816386]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Calculation_1010776694259306634]/&#13;&#10;SUM({ FIXED [Calculation_1778640428713099278]: SUM([Sales Euro Amt (copy)_1104226336341213190]) })' />
-      </column>
-      <column caption='% theft on sales eur_D2' datatype='real' default-format='p0.000%' name='[% theft on sales eur (copy)_2531023049183232002]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([thefts_eur_amt (copy)_1104226336334659587])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
       </column>
       <column caption='% physical on sales qty' datatype='real' default-format='p0.000%' name='[% theft on sales qty (copy) (copy)_1878001098303180826]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([physical_shortage_qty])/sum({ FIXED (IF [Parameters].[Parameter 2]=&apos;1&apos; THEN [Calculation_1778640428713099278] ELSE [sku_code] END):SUM([sales_qty])})' />
       </column>
       <column caption='% theft on sales eur' datatype='real' default-format='p0.000%' name='[% theft on sales qty (copy)_1878001098305667104]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([thefts_eur_amt (copy)_1104226336334659587])/sum({ FIXED (IF [Parameters].[Parameter 2]=&apos;1&apos; THEN [Calculation_1778640428713099278] ELSE [sku_code] END):SUM([Sales Euro Amt (copy)_1104226336341213190])})' />
-      </column>
-      <column caption='% theft on sales qty_D2' datatype='real' default-format='p0.000%' name='[% theft on sales qty (copy)_2531023049183432707]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM([thefts_qty])/SUM([sales_qty])' />
       </column>
       <column caption='%shrink eur extens' datatype='real' default-format='p0.000%' hidden='true' name='[%shrink qty extens (copy)_539306108736946233 1]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/&#13;&#10;SUM({ FIXED [sku_code]: SUM([Sales Euro Amt (copy)_1104226336341213190]) })' />
@@ -1726,23 +1702,15 @@
       <column-instance column='[% Shrinkages on Sales (copy)_1778640428721496081]' derivation='User' name='[usr:% Shrinkages on Sales (copy)_1778640428721496081:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales amt (copy)_1010776693230137426]' derivation='User' name='[usr:% Shrinkages on Sales amt (copy)_1010776693230137426:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales amt geo (copy)_1010776693301698675]' derivation='User' name='[usr:% Shrinkages on Sales amt geo (copy)_1010776693301698675:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% Shrinkages on Sales amt geo (copy)_2531023049184694278]' derivation='User' name='[usr:% Shrinkages on Sales amt geo (copy)_2531023049184694278:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales amt geo country (copy)_1010776693301833844]' derivation='User' name='[usr:% Shrinkages on Sales amt geo country (copy)_1010776693301833844:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales qty (copy)_1010776693230157907]' derivation='User' name='[usr:% Shrinkages on Sales qty (copy)_1010776693230157907:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales qty country (copy)_1010776693304098935]' derivation='User' name='[usr:% Shrinkages on Sales qty country (copy)_1010776693304098935:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% Shrinkages on Sales qty geo (copy)_2531023049185144839]' derivation='User' name='[usr:% Shrinkages on Sales qty geo (copy)_2531023049185144839:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% Shrinkages on Sales qty prod (copy)_1010776693303771254]' derivation='User' name='[usr:% Shrinkages on Sales qty prod (copy)_1010776693303771254:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% physical on sales eur (copy)_2531023049182289920]' derivation='User' name='[usr:% physical on sales eur (copy)_2531023049182289920:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% physical on sales qty (copy)_1878001098305200158]' derivation='User' name='[usr:% physical on sales qty (copy)_1878001098305200158:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% physical on sales qty (copy)_2531023049183019009]' derivation='User' name='[usr:% physical on sales qty (copy)_2531023049183019009:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% post inv. on sales eur (copy)_2531023049183768580]' derivation='User' name='[usr:% post inv. on sales eur (copy)_2531023049183768580:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% post inv. on sales qty (copy)_1878001098302918681]' derivation='User' name='[usr:% post inv. on sales qty (copy)_1878001098302918681:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% post inv. on sales qty (copy)_1878001098305511455]' derivation='User' name='[usr:% post inv. on sales qty (copy)_1878001098305511455:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% post inv. on sales qty (copy)_2531023049184239621]' derivation='User' name='[usr:% post inv. on sales qty (copy)_2531023049184239621:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% theft on sales eur (copy)_2531023049183232002]' derivation='User' name='[usr:% theft on sales eur (copy)_2531023049183232002:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% theft on sales qty (copy) (copy)_1878001098303180826]' derivation='User' name='[usr:% theft on sales qty (copy) (copy)_1878001098303180826:qk]' pivot='key' type='quantitative' />
       <column-instance column='[% theft on sales qty (copy)_1878001098305667104]' derivation='User' name='[usr:% theft on sales qty (copy)_1878001098305667104:qk]' pivot='key' type='quantitative' />
-      <column-instance column='[% theft on sales qty (copy)_2531023049183432707]' derivation='User' name='[usr:% theft on sales qty (copy)_2531023049183432707:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1010776693243416665]' derivation='User' name='[usr:Calculation_1010776693243416665:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1010776694259306634]' derivation='User' name='[usr:Calculation_1010776694259306634:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1778640428720365584]' derivation='User' name='[usr:Calculation_1778640428720365584:qk]' pivot='key' type='quantitative' />
@@ -2740,7 +2708,7 @@
           </metadata-records>
         </connection>
       </extract>
-      <layout common-percentage='0.897936' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.102064' show-hidden-fields='true' show-structure='true' user-set-layout-v2='true' />
+      <layout common-percentage='0.898911' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.101089' show-hidden-fields='true' show-structure='true' user-set-layout-v2='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[none:Sdb Country Desc (copy)_1778640428722921492:nk]' type='palette'>
@@ -27973,215 +27941,6 @@
               <bucket>89413.0</bucket>
             </map>
           </encoding>
-          <encoding attr='color' field='[:Measure Names]' type='palette'>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1010776693325746307:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Amt (copy)_1010776693201813561:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo (copy)_1010776693228560465:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Prod (copy)_1010776693228490832:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:physical_shortage_eur_amt (copy)_1104226336336867332:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:physical_shortage_qty:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:post_inventory_adj_eur_amt (copy)_1104226336337707013:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:post_inventory_adj_qty:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Sales Euro Amt (copy)_1778640428718223375:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:thefts_eur_amt (copy)_1104226336334659587:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:thefts_qty:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales eur (copy)_2531023049182289920:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales qty (copy)_1878001098305200158:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales qty (copy)_2531023049183019009:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales eur (copy)_2531023049183768580:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_1878001098302918681:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_1878001098305511455:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_2531023049184239621:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales eur (copy)_2531023049183232002:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy) (copy)_1878001098303180826:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy)_1878001098305667104:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy)_2531023049183432707:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693326016645:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776694259306634:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1368249917181968387:qk]&quot;</bucket>
-            </map>
-            <map to='#000000'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098302582808:qk]&quot;</bucket>
-            </map>
-            <map to='#267495'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales (copy)_1778640428721496081:qk]&quot;</bucket>
-            </map>
-            <map to='#267495'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty (copy)_1010776693230157907:qk]&quot;</bucket>
-            </map>
-            <map to='#267495'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty geo (copy)_2531023049185144839:qk]&quot;</bucket>
-            </map>
-            <map to='#499894'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo (copy)_1010776693301698675:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939325450:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939382795:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939440140:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693243416665:qk]&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693310410873:qk]&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:sales_qty:qk]&quot;</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108643844107:qk]&quot;</bucket>
-            </map>
-            <map to='#79706e'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo (copy)_1010776693300256879:qk]&quot;</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo country (copy)_1010776693301833844:qk]&quot;</bucket>
-            </map>
-            <map to='#9c755f'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:qty:qk]&quot;</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (kpis) (copy)_1010776693301289074:qk]&quot;</bucket>
-            </map>
-            <map to='#ab74d5'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt (copy)_1010776693230137426:qk]&quot;</bucket>
-            </map>
-            <map to='#ab74d5'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo (copy)_2531023049184694278:qk]&quot;</bucket>
-            </map>
-            <map to='#ab74d5'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1778640428720365584:qk]&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo country (map tooltip) (copy)_1010776693300678768:qk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1010776694261325964:nk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_994451148809076741:qk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Class Desc (copy)_1010776693207195723:nk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Subdepartment Desc (copy)_1010776693207314509:nk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:subdepartment_desc:nk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Calculation_994451148809076741:qk]&quot;</bucket>
-            </map>
-            <map to='#c90077'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Shrinkages qty (copy)_1778640428709142537:qk]&quot;</bucket>
-            </map>
-            <map to='#d37295'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Geo (copy)_1010776693300256878:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Sales Euro Amt (copy)_1104226336341213190:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:sales_euro_amt:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty prod (copy)_1010776693303771254:qk]&quot;</bucket>
-            </map>
-            <map to='#e3d1f1'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1878001098296905744:qk]&quot;</bucket>
-            </map>
-            <map to='#e3d1f1'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296934417:qk]&quot;</bucket>
-            </map>
-            <map to='#e3d1f1'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108647677972:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (copy)_1010776693243986010:qk]&quot;</bucket>
-            </map>
-            <map to='#fabfd2'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Geo country (copy)_1010776693300924529:qk]&quot;</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty country (copy)_1010776693304098935:qk]&quot;</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (country map) (copy)_1010776693302161525:qk]&quot;</bucket>
-            </map>
-            <map to='#ffc1e6'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Calculation_1878001098296471565:qk]&quot;</bucket>
-            </map>
-            <map to='#ffc1e6'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296508430:qk]&quot;</bucket>
-            </map>
-            <map to='#ffc1e6'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108646408208:qk]&quot;</bucket>
-            </map>
-            <map to='#ffc2d0'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf]&quot;</bucket>
-            </map>
-            <map to='#ffe0e7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296565775:qk]&quot;</bucket>
-            </map>
-            <map to='#ffe0e7'>
-              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108646830098:qk]&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:Class Desc (copy)_1010776693207195723:nk]' type='palette'>
             <map to='#499894'>
               <bucket>&quot;AIRPODS CASE&quot;</bucket>
@@ -30163,6 +29922,215 @@
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;orange&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1010776693325746307:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Amt (copy)_1010776693201813561:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo (copy)_1010776693228560465:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Prod (copy)_1010776693228490832:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:physical_shortage_eur_amt (copy)_1104226336336867332:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:physical_shortage_qty:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:post_inventory_adj_eur_amt (copy)_1104226336337707013:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:post_inventory_adj_qty:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Sales Euro Amt (copy)_1778640428718223375:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:thefts_eur_amt (copy)_1104226336334659587:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:thefts_qty:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales eur (copy)_2531023049182289920:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales qty (copy)_1878001098305200158:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% physical on sales qty (copy)_2531023049183019009:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales eur (copy)_2531023049183768580:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_1878001098302918681:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_1878001098305511455:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% post inv. on sales qty (copy)_2531023049184239621:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales eur (copy)_2531023049183232002:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy) (copy)_1878001098303180826:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy)_1878001098305667104:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% theft on sales qty (copy)_2531023049183432707:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693326016645:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776694259306634:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1368249917181968387:qk]&quot;</bucket>
+            </map>
+            <map to='#000000'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098302582808:qk]&quot;</bucket>
+            </map>
+            <map to='#267495'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales (copy)_1778640428721496081:qk]&quot;</bucket>
+            </map>
+            <map to='#267495'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty (copy)_1010776693230157907:qk]&quot;</bucket>
+            </map>
+            <map to='#267495'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty geo (copy)_2531023049185144839:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo (copy)_1010776693301698675:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939325450:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939382795:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776692939440140:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693243416665:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1010776693310410873:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:sales_qty:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108643844107:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo (copy)_1010776693300256879:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo country (copy)_1010776693301833844:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:qty:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (kpis) (copy)_1010776693301289074:qk]&quot;</bucket>
+            </map>
+            <map to='#ab74d5'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt (copy)_1010776693230137426:qk]&quot;</bucket>
+            </map>
+            <map to='#ab74d5'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales amt geo (copy)_2531023049184694278:qk]&quot;</bucket>
+            </map>
+            <map to='#ab74d5'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1778640428720365584:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Euro Geo country (map tooltip) (copy)_1010776693300678768:qk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1010776694261325964:nk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_994451148809076741:qk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Class Desc (copy)_1010776693207195723:nk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Subdepartment Desc (copy)_1010776693207314509:nk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:subdepartment_desc:nk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Calculation_994451148809076741:qk]&quot;</bucket>
+            </map>
+            <map to='#c90077'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Shrinkages qty (copy)_1778640428709142537:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Geo (copy)_1010776693300256878:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Sales Euro Amt (copy)_1104226336341213190:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:sales_euro_amt:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty prod (copy)_1010776693303771254:qk]&quot;</bucket>
+            </map>
+            <map to='#e3d1f1'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[none:Calculation_1878001098296905744:qk]&quot;</bucket>
+            </map>
+            <map to='#e3d1f1'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296934417:qk]&quot;</bucket>
+            </map>
+            <map to='#e3d1f1'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108647677972:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (copy)_1010776693243986010:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:FIXED Sales Qty Geo country (copy)_1010776693300924529:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrinkages on Sales qty country (copy)_1010776693304098935:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:\% Shrink amt param. (country map) (copy)_1010776693302161525:qk]&quot;</bucket>
+            </map>
+            <map to='#ffc1e6'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[sum:Calculation_1878001098296471565:qk]&quot;</bucket>
+            </map>
+            <map to='#ffc1e6'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296508430:qk]&quot;</bucket>
+            </map>
+            <map to='#ffc1e6'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108646408208:qk]&quot;</bucket>
+            </map>
+            <map to='#ffc2d0'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf]&quot;</bucket>
+            </map>
+            <map to='#ffe0e7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_1878001098296565775:qk]&quot;</bucket>
+            </map>
+            <map to='#ffe0e7'>
+              <bucket>&quot;[federated.1wbgn8n0a5ronn176u4hx0jx2bjf].[usr:Calculation_539306108646830098:qk]&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -38735,30 +38703,6 @@
             </column>
           </datasource-dependencies>
           <datasource-dependencies datasource='federated.1wbgn8n0a5ronn176u4hx0jx2bjf'>
-            <column caption='% Shrinkages on Sales amt_D2' datatype='real' default-format='p0.00%' name='[% Shrinkages on Sales amt geo (copy)_2531023049184694278]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[Calculation_1010776694259306634]/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-            </column>
-            <column caption='% Shrinkages on Sales qty_D2' datatype='real' default-format='p0.00%' name='[% Shrinkages on Sales qty geo (copy)_2531023049185144839]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='[Shrinkages qty (copy)_1778640428709142537]/SUM([sales_qty])' />
-            </column>
-            <column caption='% physical on sales eur_D2' datatype='real' default-format='p0.000%' name='[% physical on sales eur (copy)_2531023049182289920]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([physical_shortage_eur_amt (copy)_1104226336336867332])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-            </column>
-            <column caption='% physical on sales qty_D2' datatype='real' default-format='p0.000%' name='[% physical on sales qty (copy)_2531023049183019009]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([physical_shortage_qty])/SUM([sales_qty])' />
-            </column>
-            <column caption='% post inv. on sales eur_D2' datatype='real' default-format='p0.000%' name='[% post inv. on sales eur (copy)_2531023049183768580]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([post_inventory_adj_eur_amt (copy)_1104226336337707013])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-            </column>
-            <column caption='% post inv. on sales qty_D2' datatype='real' default-format='p0.000%' name='[% post inv. on sales qty (copy)_2531023049184239621]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([post_inventory_adj_qty])/SUM([sales_qty])' />
-            </column>
-            <column caption='% theft on sales eur_D2' datatype='real' default-format='p0.000%' name='[% theft on sales eur (copy)_2531023049183232002]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([thefts_eur_amt (copy)_1104226336334659587])/SUM([Sales Euro Amt (copy)_1104226336341213190])' />
-            </column>
-            <column caption='% theft on sales qty_D2' datatype='real' default-format='p0.000%' name='[% theft on sales qty (copy)_2531023049183432707]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([thefts_qty])/SUM([sales_qty])' />
-            </column>
             <column caption='Department' datatype='string' name='[Calculation_1010776693205999689]' role='dimension' type='nominal'>
               <calculation class='tableau' formula='[department_code]+&apos; - &apos;+[department_desc]' />
             </column>
@@ -38904,14 +38848,6 @@
             <column caption='Thefts Qty' datatype='integer' name='[thefts_qty]' role='measure' type='quantitative' />
             <column datatype='real' name='[thefts_usd_amt]' role='measure' type='quantitative' />
             <column caption='Transaction Desc' datatype='string' name='[transaction_desc]' role='dimension' type='nominal' />
-            <column-instance column='[% Shrinkages on Sales amt geo (copy)_2531023049184694278]' derivation='User' name='[usr:% Shrinkages on Sales amt geo (copy)_2531023049184694278:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% Shrinkages on Sales qty geo (copy)_2531023049185144839]' derivation='User' name='[usr:% Shrinkages on Sales qty geo (copy)_2531023049185144839:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% physical on sales eur (copy)_2531023049182289920]' derivation='User' name='[usr:% physical on sales eur (copy)_2531023049182289920:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% physical on sales qty (copy)_2531023049183019009]' derivation='User' name='[usr:% physical on sales qty (copy)_2531023049183019009:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% post inv. on sales eur (copy)_2531023049183768580]' derivation='User' name='[usr:% post inv. on sales eur (copy)_2531023049183768580:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% post inv. on sales qty (copy)_2531023049184239621]' derivation='User' name='[usr:% post inv. on sales qty (copy)_2531023049184239621:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% theft on sales eur (copy)_2531023049183232002]' derivation='User' name='[usr:% theft on sales eur (copy)_2531023049183232002:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[% theft on sales qty (copy)_2531023049183432707]' derivation='User' name='[usr:% theft on sales qty (copy)_2531023049183432707:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_1010776694259306634]' derivation='User' name='[usr:Calculation_1010776694259306634:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Param. Filtra Shrink. Qty &lt;&gt; 0 (copy)_1539105231601897474]' derivation='User' name='[usr:Param. Filtra Shrink. Qty &lt;&gt; 0 (copy)_1539105231601897474:nk]' pivot='key' type='nominal' />
             <column-instance column='[Shrinkages qty (copy)_1778640428709142537]' derivation='User' name='[usr:Shrinkages qty (copy)_1778640428709142537:qk]' pivot='key' type='quantitative' />
@@ -42917,7 +42853,7 @@
       <active id='-1' />
       <simple-id uuid='{EAA77618-4031-45EE-936A-632213BA4968}' />
     </window>
-    <window class='worksheet' name='D1 - Tabella Prod'>
+    <window class='worksheet' maximized='true' name='D1 - Tabella Prod'>
       <cards>
         <edge name='left'>
           <strip size='276'>
@@ -43397,7 +43333,7 @@
       </viewpoint>
       <simple-id uuid='{833C5D4B-BEF2-4E6D-9509-52F710C99369}' />
     </window>
-    <window class='dashboard' maximized='true' name='D2 - Export' tab-color='#f66273'>
+    <window class='dashboard' name='D2 - Export' tab-color='#f66273'>
       <viewpoints>
         <viewpoint name='D2_Error_message'>
           <zoom type='entire-view' />
@@ -43411,7 +43347,7 @@
           <zoom type='fit-width' />
         </viewpoint>
       </viewpoints>
-      <active id='663' />
+      <active id='-1' />
       <simple-id uuid='{8B602838-8F57-4FE8-B14B-F1B3FD5D9F53}' />
     </window>
     <window class='worksheet' name='D2_Export_Tab'>
